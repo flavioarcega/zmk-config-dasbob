@@ -26,9 +26,9 @@
 // |LSHIFT Z |        X |         C |         V  |    B    |    |    N    |    M       |      ,   |    .      | RSHIFT / |
 //                      |   ESC     |   LALT DEL |    BSPC |    |   SPC   | RALT ENTER |     TAB  |
             bindings = <
-&kp        Q &kp       W &kp      E  &kp R        &kp T          &kp Y     &kp U        &kp    I   &kp O       &kp P
-&kp        A &mt LCTRL S &lt FUNC D  &lt NUMF F   &kp G          &kp H     &lt NUMJ J   &lt FUNC K &mt RCTRL L &kp SEMI
-&mt LSHIFT Z &kp       X &kp      C  &kp V        &kp B          &kp N     &kp M        &kp COMMA  &kp DOT     &mt RSHIFT FSLH
+&kp        Q &kp       W &kp       E &kp R        &kp T          &kp Y     &kp U        &kp    I   &kp O       &kp P
+&kp        A &mt LCTRL S &lt MOUSE D &lt NUMF F   &kp G          &kp H     &lt NUMJ J   &lt MOUSE K &mt RCTRL L &kp SEMI
+&mt LSHIFT Z &kp       X &kp       C &kp V        &kp B          &kp N     &kp M        &kp COMMA  &kp DOT     &mt RSHIFT FSLH
                          &kp ESC     &mt LALT DEL &kp BSPC       &kp SPACE &mt RALT RET &kp TAB
             >;
         };
