@@ -5,15 +5,15 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define NUMF 1
 #define NUMJ 2
-#define MOUSE 3
-#define FUNC 4
+#define FUNC 3
+#define MOUSE 4
 
 / {
         keymap {
@@ -26,8 +26,8 @@
 // |LSHIFT Z |        X |         C |         V  |    B    |    |    N    |    M       |      ,   |    .      | RSHIFT / |
 //                      |   ESC     |   LALT DEL |    BSPC |    |   SPC   | RALT ENTER |     TAB  |
             bindings = <
-&kp        Q &kp       W &kp       E &kp R        &kp T          &kp Y     &kp U        &kp    I   &kp O       &kp P
-&kp        A &mt LCTRL S &lt MOUSE D &lt NUMF F   &kp G          &kp H     &lt NUMJ J   &lt MOUSE K &mt RCTRL L &kp SEMI
+&kp        Q &kp       W &kp       E &kp R        &kp T          &kp Y     &kp U        &kp      I &kp O       &kp P
+&kp        A &mt LCTRL S &lt FUNC  D &lt NUMF F   &kp G          &kp H     &lt NUMJ J   &lt FUNC K &mt RCTRL L &kp SEMI
 &mt LSHIFT Z &kp       X &kp       C &kp V        &kp B          &kp N     &kp M        &kp COMMA  &kp DOT     &mt RSHIFT FSLH
                          &kp ESC     &mt LALT DEL &kp BSPC       &kp SPACE &mt RALT RET &kp TAB
             >;
@@ -61,6 +61,20 @@
             >;
         };
 
+        func_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |    F1  |    F2   |    F3   |   F4   |         |        |          |          |       |         |        |
+// |    F5  |    F6   |    F7   |   F8   |         |        |          |          |       |  LCTRL  |        |
+// |    F9  |   F10   |   F11   |   F12  |         |        |          |     -    |       |         | RSHIFT |
+//                    |         |  LGUI  | LGUIPGU |        |  LGUIPGD |   LALT   |       |
+            bindings = <
+    &kp F1   &kp F2    &kp F3    &kp F4    &bt BT_SEL 1     &out OUT_USB &none      &none  &none     &none
+    &kp F5   &kp F6    &kp F7    &kp F8    &bt BT_SEL 2     &out OUT_BLE &none      &trans &kp LCTRL &none
+    &kp F9   &kp F10   &kp F11   &kp F12   &bt BT_CLR       &bt BT_CLR   &none      &none  &none     &kp RSHIFT
+                    &out OUT_TOG &kp LGUI  &kp LGUI         &kp LGUI     &kp LALT   &none
+            >;
+        };
+
 //        mouse_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |        |       |       |        |       | LGUI L | LGUI D  | LGUI U  | LGUI R  | PSCR  |
@@ -75,19 +89,6 @@
 //            >;
 //        };
 
-        func_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |    F1  |    F2   |    F3   |   F4   |         |        |          |          |       |         |        |
-// |    F5  |    F6   |    F7   |   F8   |         |        |          |          |       |  LCTRL  |        |
-// |    F9  |   F10   |   F11   |   F12  |         |        |          |     -    |       |         | RSHIFT |
-//                    |         |  LGUI  | LGUIPGU |        |  LGUIPGD |   LALT   |       |
-            bindings = <
-    &kp F1   &kp F2    &kp F3    &kp F4    &bt BT_SEL 1     &out OUT_USB &none      &none  &none     &none
-    &kp F5   &kp F6    &kp F7    &kp F8    &bt BT_SEL 2     &out OUT_BLE &none      &trans &kp LCTRL &none
-    &kp F9   &kp F10   &kp F11   &kp F12   &bt BT_CLR       &bt BT_CLR   &none      &none  &none     &kp RSHIFT
-                    &out OUT_TOG &kp LGUI  &kp LGUI         &kp LGUI     &kp LALT   &none
-            >;
-        };
     };
 };
 
