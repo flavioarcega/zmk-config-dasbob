@@ -1,7 +1,10 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_DASBOB_RIGHT
+if SHIELD_DASBOB_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "dasbob"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
@@ -9,9 +12,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif
 
 if SHIELD_DASBOB_LEFT || SHIELD_DASBOB_RIGHT
-
-config ZMK_KEYBOARD_NAME
-	default "dasbob"
 
 config ZMK_SPLIT
 	default y
