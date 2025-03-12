@@ -21,13 +21,14 @@ include:
   - board: nice_nano_v2
     shield: dasbob_left
     artifact-name: dasbob_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: dasbob_right
     artifact-name: dasbob_right
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
     artifact-name: dasbob_reset
   - board: nice_nano_v2
     shield: tester_pro_micro
+    snippet: zmk-usb-logging
