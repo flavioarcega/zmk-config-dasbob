@@ -20,15 +20,16 @@
 include:
   - board: nice_nano_v2
     shield: dasbob_left
-    artifact-name: dasbob_left
+    artifact-name: dasbob_1left
     snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: dasbob_right
-    artifact-name: dasbob_right
+    artifact-name: dasbob_2right
     snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
-    artifact-name: dasbob_reset
+    artifact-name: dasbob_3reset
   - board: nice_nano_v2
     shield: tester_pro_micro
     snippet: zmk-usb-logging
+    artifact-name: dasbob_4tester
